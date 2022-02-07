@@ -7,8 +7,7 @@ public class Spawner : MonoBehaviour
 {
     public GameObject barriers;
     public float spawnSpeed;
-
-    
+  
     void Start()
     {
         StartCoroutine(Co_Spawner(spawnSpeed));     

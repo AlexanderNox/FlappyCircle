@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Barriers : MonoBehaviour
 {
-
     public float speed;
 
     void Update()
