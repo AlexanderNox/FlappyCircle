@@ -5,12 +5,13 @@ using UnityEngine;
 public class Barriers : MonoBehaviour
 {
     [SerializeField] private float _speed;
+    [SerializeField] private float _destroyXСoordinate;
 
     void Update()
     {
         transform.Translate(Vector2.left * _speed * Time.deltaTime);
 
-        if(transform.position.x < -16)
+        if(transform.position.x < _destroyXСoordinate)
         {
             Destroy(gameObject);
         }

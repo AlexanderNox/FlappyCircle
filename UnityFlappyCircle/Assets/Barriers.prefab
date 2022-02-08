@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5917501975987480184}
   - component: {fileID: 2772583169832470425}
+  - component: {fileID: 658189882499429775}
   m_Layer: 0
   m_Name: CounterTigger
   m_TagString: CounterTigger
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5402862391352947539}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.75, y: -0.45, z: -0.44688144}
+  m_LocalPosition: {x: 0.75, y: -0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6098391302880935970}
@@ -57,6 +58,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.65, y: 3.83}
   m_EdgeRadius: 0
+--- !u!114 &658189882499429775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5402862391352947539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb2f5f7e3331684880d9745d2c89920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6098391301887718815
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,8 +96,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6098391301887718815}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.693, y: 4.82, z: 0}
-  m_LocalScale: {x: 2.3859, y: 7.1851, z: 1}
+  m_LocalPosition: {x: 0.693, y: 6.4268, z: 0}
+  m_LocalScale: {x: 2.3859, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 6098391302880935970}
   m_RootOrder: 0
@@ -175,7 +188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6098391302880935970}
-  - component: {fileID: 6098391302880935968}
+  - component: {fileID: 4857305560026905169}
   m_Layer: 0
   m_Name: Barriers
   m_TagString: Barriers
@@ -200,7 +213,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6098391302880935968
+--- !u!114 &4857305560026905169
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,7 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2b0e48d91fc87f49a45d7a9a156671d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 4
+  _speed: 5
+  "_destroyX\u0421oordinate": -15
 --- !u!1 &6098391303047482549
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,8 +253,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6098391303047482549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.693, y: -5.69, z: 0}
-  m_LocalScale: {x: 2.3859, y: 7.1851, z: 1}
+  m_LocalPosition: {x: 0.693, y: -7.1543, z: 0}
+  m_LocalScale: {x: 2.3859, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 6098391302880935970}
   m_RootOrder: 1

@@ -6,7 +6,9 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public float spawnSpeed;
-    [SerializeField] private GameObject barriers;
+    [SerializeField] private GameObject _barriers;
+    [SerializeField] private Transform _upperBorder;
+    [SerializeField] private Transform _lowerBorder;
      
     void Start()
     {
@@ -17,7 +19,7 @@ public class Spawner : MonoBehaviour
     {
         while(true)
         {
-            Instantiate(barriers, new Vector3(transform.position.x, Random.Range(-2f, 3.7f), transform.position.z), transform.rotation); 
+            Instantiate(_barriers, new Vector3(transform.position.x, Random.Range(_lowerBorder.position.y, _upperBorder.position.y), transform.position.z), transform.rotation); 
             yield return new WaitForSeconds(waitTime);
         }
        
