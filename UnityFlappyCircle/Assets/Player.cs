@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public float jumpForce;
-    public Rigidbody2D rb;
-    public Counter counter;
+    [SerializeField] private float jumpForce;
+    [SerializeField] private Rigidbody2D _rigidbody;
+    
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.velocity = (new Vector2(0f, jumpForce));   
+            _rigidbody.velocity = (new Vector2(0f, jumpForce));   
         }
 
         if (transform.position.y < -6 || transform.position.y > 5.3f)
@@ -37,9 +37,9 @@ public class Player : MonoBehaviour
             GameOver();
         } 
 
-        if(other.tag == "CounterTigger")
-        {
-            counter.count++;
-        } 
+        // if(other.tag == "CounterTigger")
+        // {
+        //     counter.count++;
+        // } 
     }
 }

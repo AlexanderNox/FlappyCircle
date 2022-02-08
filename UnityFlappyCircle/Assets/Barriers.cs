@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Barriers : MonoBehaviour
 {
-    public float speed;
+    [SerializeField] private float _speed;
 
     void Update()
     {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        transform.Translate(Vector2.left * _speed * Time.deltaTime);
 
         if(transform.position.x < -16)
         {

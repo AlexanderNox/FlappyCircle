@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class Counter : MonoBehaviour
 {
-   public Text counterText;
+   [SerializeField] Text _counterText;
    public int count;
     void Update()
     {
-        counterText.text = count.ToString();        
+        _counterText.text = count.ToString();        
     }
 }

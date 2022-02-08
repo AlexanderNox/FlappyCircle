@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject barriers;
     public float spawnSpeed;
-  
+    [SerializeField] private GameObject barriers;
+     
     void Start()
     {
-        StartCoroutine(Co_Spawner(spawnSpeed));     
+        StartCoroutine(SpawnCoroutin(spawnSpeed));     
     }
 
-    private IEnumerator Co_Spawner(float waitTime)
+    private IEnumerator SpawnCoroutin(float waitTime)
     {
         while(true)
         {
