@@ -6,20 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameOverLogic : MonoBehaviour
 {
     
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag == "Barriers")
-        {
-            GameOver();
-        }       
-    }
-
     void OnBecameInvisible()
     {
         GameOver();
     }
 
-    void GameOver()
+    public void GameOver()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

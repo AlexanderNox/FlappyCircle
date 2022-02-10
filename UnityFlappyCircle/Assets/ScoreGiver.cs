@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class ScoreGiver : MonoBehaviour
 {
-   public void GiveScore(ref int score)
-   {
-       score++;
-   } 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.GetComponent<ScoreCounter>() != null)
+        {
+            other.GetComponent<ScoreCounter>().AddScore();
+        }
+    }
 }
