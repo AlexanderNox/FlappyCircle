@@ -6,7 +6,7 @@ namespace View
     {
         public void SetPosition(Vector2 position)
         {
-            Debug.Log($"Set position X {position.x} Y {position.y}");
+            // Debug.Log($"Set position X {position.x} Y {position.y}");
             transform.position = position;
         }
     }

@@ -6,14 +6,13 @@ using Zenject;
 namespace Presenters
 {
     [RequireComponent(typeof(PlayerView))]
-    public class PlayerPresenter : MonoBehaviour
+    public class PlayerPresenter : MonoBehaviour, ICandie
     {
         private PlayerView _playerView;
         private Player _player;
 
         [Inject]
         private void Construct(Player player) => _player = player;
-
 
         private void Awake() => _playerView = GetComponent<PlayerView>();
 
@@ -23,7 +22,6 @@ namespace Presenters
             _player.Moved += _playerView.SetPosition;
         }
 
-
         private void FixedUpdate() => _player.OnFixedUpdate();
 
         private void OnDisable()
@@ -32,6 +30,6 @@ namespace Presenters
             _player.OnDisable();
         }
 
-        public void OnBarriersTouch() => _player.OnBarriersTouch();
+        public void Die() => _player.Die();
     }
 }
